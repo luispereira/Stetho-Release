@@ -1,17 +1,9 @@
-/*
- * Copyright (c) 2016 WIT Software. All rights reserved.;
- *
- * WIT Software Confidential and Proprietary information. It is strictly forbidden for 3rd parties to modify, decompile,
- * disassemble, defeat, disable or circumvent any protection mechanism; to sell, license, lease, rent, redistribute
- * make accessible to any third party, whether for profit or without charge.
- *
- * Created by Luis Pereira on 5/13/2016.
- */
-
 package com.facebook.stetho;
 
 import android.content.Context;
 
+import com.facebook.stetho.dumpapp.DumperPluginsProvider;
+import com.facebook.stetho.inspector.protocol.InspectorModulesProvider;
 import com.facebook.stetho.server.RegistryInitializer;
 
 /**
@@ -26,18 +18,54 @@ public class Stetho {
         return new InitializerBuilder(context);
     }
 
+    /**
+     * Start the listening server.  Most of the heavy lifting initialization is deferred until the
+     * first socket connection is received, allowing this to be safely used for debug builds on
+     * even low-end hardware without noticeably affecting performance.
+     */
     public static void initialize(final Initializer initializer) {
     }
 
-
-    public static abstract class Initializer implements RegistryInitializer {
+    public static DumperPluginsProvider defaultDumperPluginsProvider(final Context context) {
+        return null;
     }
 
+    public static InspectorModulesProvider defaultInspectorModulesProvider(final Context context) {
+        return null;
+    }
+
+
+    /**
+     * Callers can choose to subclass this directly to provide the initialization configuration
+     * or they can construct a concrete instance using {@link #newInitializerBuilder(Context)}.
+     */
+    public static abstract class Initializer implements RegistryInitializer {
+
+    }
+
+    /**
+     * Configure what services are to be enabled in this instance of Stetho.
+     */
     public static class InitializerBuilder {
+
         private InitializerBuilder(Context context) {
         }
+
+        public InitializerBuilder enableDumpapp(DumperPluginsProvider plugins) {
+            return this;
+        }
+
+        public InitializerBuilder enableWebKitInspector(InspectorModulesProvider modules) {
+            return this;
+        }
+
+        public Stetho.Initializer build() {
+            return null;
+        }
+
     }
 
     private static class BuilderBasedInitializer extends Initializer {
+
     }
 }

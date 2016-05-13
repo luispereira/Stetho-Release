@@ -8,3 +8,5 @@
 /captures
 .idea/
 gradle/
+buildSystem/bintrayConfigurations.gradle
+buildSystem/bintrayUpload.gradle
