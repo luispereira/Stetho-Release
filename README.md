@@ -6,7 +6,8 @@ This lib allows the developer to import a release version reducing all the unece
 
 Dependency:
 ```groovy 
-   compile 'com.github.luispereira:stethorelease:0.1.1'
+   compileDebug 'compile 'com.facebook.stetho:stetho:1.3.1'
+   compileRelease 'com.github.luispereira:stethorelease:0.1.1'
  ```
 Repository:
 ```groovy
