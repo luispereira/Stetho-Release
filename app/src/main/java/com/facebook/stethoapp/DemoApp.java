@@ -11,6 +11,7 @@ package com.facebook.stethoapp;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 /**

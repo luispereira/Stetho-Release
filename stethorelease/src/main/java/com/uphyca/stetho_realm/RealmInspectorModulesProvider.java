@@ -2,7 +2,7 @@ package com.uphyca.stetho_realm;
 
 import android.content.Context;
 
-import com.facebook.stethoapp.inspector.protocol.InspectorModulesProvider;
+import com.facebook.stetho.inspector.protocol.InspectorModulesProvider;
 
 import java.io.File;
 import java.util.Map;

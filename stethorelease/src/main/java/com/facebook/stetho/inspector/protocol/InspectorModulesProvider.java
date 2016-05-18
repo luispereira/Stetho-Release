@@ -1,4 +1,4 @@
-package com.facebook.stethoapp.inspector.protocol;
+package com.facebook.stetho.inspector.protocol;
 
 /**
  * @author lpereira on 13/05/2016.

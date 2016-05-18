@@ -1,4 +1,4 @@
-package com.facebook.stethoapp.server;
+package com.facebook.stetho.server;
 
 /**
  * @author lpereira on 13/05/2016.
