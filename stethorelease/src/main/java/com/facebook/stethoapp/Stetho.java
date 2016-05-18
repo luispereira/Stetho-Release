@@ -1,10 +1,10 @@
-package com.facebook.stetho;
+package com.facebook.stethoapp;
 
 import android.content.Context;
 
-import com.facebook.stetho.dumpapp.DumperPluginsProvider;
-import com.facebook.stetho.inspector.protocol.InspectorModulesProvider;
-import com.facebook.stetho.server.RegistryInitializer;
+import com.facebook.stethoapp.dumpapp.DumperPluginsProvider;
+import com.facebook.stethoapp.inspector.protocol.InspectorModulesProvider;
+import com.facebook.stethoapp.server.RegistryInitializer;
 
 /**
  * @author lpereira on 13/05/2016.

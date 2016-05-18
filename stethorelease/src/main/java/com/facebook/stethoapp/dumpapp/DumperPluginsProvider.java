@@ -1,4 +1,4 @@
-package com.facebook.stetho.dumpapp;
+package com.facebook.stethoapp.dumpapp;
 
 /**
  * @author lpereira on 13/05/2016.

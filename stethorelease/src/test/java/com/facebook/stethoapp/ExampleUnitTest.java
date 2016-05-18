@@ -1,4 +1,4 @@
-package com.facebook.stetho;
+package com.facebook.stethoapp;
 
 import org.junit.Test;
 

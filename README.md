@@ -27,3 +27,14 @@ The usage is the same as calling the http://facebook.github.io/stetho/  (1.3.1)
                   .build()
   );
 ```
+
+Additionally, was added support for RealmInspectorModulesProvider provided by stetho_realm (https://github.com/uPhyca/stetho-realm)
+
+```java
+  Stetho.initialize(
+          Stetho.newInitializerBuilder(this)
+                  .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                  .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                  .build()
+  );
+```
