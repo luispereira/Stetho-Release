@@ -7,6 +7,7 @@ This lib allows the developer to import a release version reducing all the unece
 Dependency:
 ```groovy 
    debugCompile 'com.facebook.stetho:stetho:1.3.0'
+   debugCompile 'com.uphyca:stetho_realm:0.9.0' //use this only if you need the realm provider
    releaseCompile 'com.github.luispereira:stethorelease:0.1.3'
  ```
 Repository:
